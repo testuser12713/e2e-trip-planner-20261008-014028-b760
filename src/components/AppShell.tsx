@@ -17,16 +17,25 @@ function navLinkClass({ isActive }: { isActive: boolean }): string {
 /** Sticky top bar with the product name and the trip navigation. */
 export function AppShell() {
   const { trips } = useTripStore();
+  const location = useLocation();
   const tripId = useActiveTripId();
   const trip = tripId ? trips.find((candidate) => candidate.id === tripId) : undefined;
+  // On the trip list itself the title would be a link to the page already shown —
+  // a control that visibly does nothing. Render it as plain text there and keep it
+  // a working link back to the list from every other page.
+  const isTripList = location.pathname === '/';
 
   return (
     <div className="app">
       <header className="app-header">
         <div className="app-header__inner container">
-          <Link to="/" className="app-header__brand">
-            Trip Planner
-          </Link>
+          {isTripList ? (
+            <span className="app-header__brand">Trip Planner</span>
+          ) : (
+            <Link to="/" className="app-header__brand">
+              Trip Planner
+            </Link>
+          )}
           <nav className="app-nav" aria-label="Main">
             <NavLink to="/" end className={navLinkClass}>
               Trips

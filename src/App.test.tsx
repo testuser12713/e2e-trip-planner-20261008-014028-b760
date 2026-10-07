@@ -242,6 +242,8 @@ describe('App shell', () => {
     expect(screen.getByText('Trip Planner')).toBeInTheDocument();
     const tripsLink = screen.getByRole('link', { name: 'Trips' });
     expect(tripsLink).toHaveAttribute('href', '/');
+    // The title is not a control on its own page (no link to the current page).
+    expect(screen.queryByRole('link', { name: 'Trip Planner' })).toBeNull();
   });
 
   it('marks the active section in the header on a trip route', () => {
@@ -256,6 +258,11 @@ describe('App shell', () => {
     const itinerary = screen.getByRole('link', { name: 'Itinerary' });
     expect(itinerary).toHaveAttribute('aria-current', 'page');
     expect(screen.getByText('Rome')).toBeInTheDocument();
+    // Away from the list the title is a working link back to it.
+    expect(screen.getByRole('link', { name: 'Trip Planner' })).toHaveAttribute(
+      'href',
+      '/',
+    );
   });
 
   it('does not crash on an unknown trip id', () => {
