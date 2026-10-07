@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Planner — New trip</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" data-od-id="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="index.html" data-od-id="brand-link">Trip Planner</a>
+      <nav class="tabs" aria-label="Primary" data-od-id="primary-nav">
+        <a class="tab" href="index.html" data-od-id="tab-trips">Trips</a>
+        <span class="tab is-disabled" aria-disabled="true" title="Select a trip first">Itinerary</span>
+        <span class="tab is-disabled" aria-disabled="true" title="Select a trip first">Budget</span>
+        <span class="tab is-disabled" aria-disabled="true" title="Select a trip first">Packing</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow" data-od-id="new-trip-page">
+    <h1 class="page-title" data-od-id="page-title">New trip</h1>
+    <p class="page-sub">Plan a trip with a destination and a date range.</p>
+
+    <form id="newTripForm" novalidate class="panel" data-od-id="new-trip-form">
+      <div class="form-grid">
+        <div class="field" data-od-id="field-name">
+          <label class="field-label" for="tripName">Trip name</label>
+          <input type="text" id="tripName" name="name" placeholder="e.g. Amalfi Coast" autocomplete="off" aria-describedby="tripNameError">
+          <p class="field-error" id="tripNameError">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2 12.5 11h-11L7 2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M7 5.5v2.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/><circle cx="7" cy="9.6" r="0.7" fill="currentColor"/></svg>
+            <span>Please enter a trip name</span>
+          </p>
+        </div>
+
+        <div class="field" data-od-id="field-destination">
+          <label class="field-label" for="destination">Destination</label>
+          <input type="text" id="destination" name="destination" placeholder="e.g. Positano, Italy" autocomplete="off" aria-describedby="destinationError">
+          <p class="field-error" id="destinationError">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2 12.5 11h-11L7 2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M7 5.5v2.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/><circle cx="7" cy="9.6" r="0.7" fill="currentColor"/></svg>
+            <span>Please enter a destination</span>
+          </p>
+        </div>
+
+        <div class="field" data-od-id="field-start">
+          <label class="field-label" for="startDate">Start date</label>
+          <input type="date" id="startDate" name="startDate" aria-describedby="endDateError">
+        </div>
+
+        <div class="field" data-od-id="field-end">
+          <label class="field-label" for="endDate">End date</label>
+          <input type="date" id="endDate" name="endDate" aria-describedby="endDateError">
+          <p class="field-error" id="endDateError">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2 12.5 11h-11L7 2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M7 5.5v2.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/><circle cx="7" cy="9.6" r="0.7" fill="currentColor"/></svg>
+            <span>The end date must not be before the start date</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <a class="btn btn-secondary" href="index.html" data-od-id="cancel-trip-btn">Cancel</a>
+        <button type="submit" class="btn btn-primary" data-od-id="save-trip-btn">Save trip</button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    var form = document.getElementById('newTripForm');
+    var nameField = document.getElementById('tripName');
+    var destField = document.getElementById('destination');
+    var startField = document.getElementById('startDate');
+    var endField = document.getElementById('endDate');
+
+    function fieldWrap(el) { return el.closest('.field'); }
+    function setError(el, show) {
+      fieldWrap(el).classList.toggle('has-error', show);
+      el.setAttribute('aria-invalid', show ? 'true' : 'false');
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var nameOk = nameField.value.trim() !== '';
+      var destOk = destField.value.trim() !== '';
+      var datesOk = true;
+      if (startField.value && endField.value && endField.value < startField.value) {
+        datesOk = false;
+      }
+
+      setError(nameField, !nameOk);
+      setError(destField, !destOk);
+      setError(endField, !datesOk);
+
+      if (!nameOk) { nameField.focus(); return; }
+      if (!destOk) { destField.focus(); return; }
+      if (!datesOk) { endField.focus(); return; }
+
+      window.location.href = 'trip.html';
+    });
+
+    [nameField, destField, startField, endField].forEach(function (el) {
+      el.addEventListener('blur', function () {
+        if (el === endField) {
+          var datesOk = !(startField.value && endField.value && endField.value < startField.value);
+          setError(endField, !datesOk);
+        } else if (el.value.trim() === '') {
+          setError(el, true);
+        } else {
+          setError(el, false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

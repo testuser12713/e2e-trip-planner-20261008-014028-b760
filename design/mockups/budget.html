@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Planner — Budget</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" data-od-id="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="index.html" data-od-id="brand-link">Trip Planner</a>
+      <nav class="tabs" aria-label="Primary" data-od-id="primary-nav">
+        <a class="tab" href="index.html" data-od-id="tab-trips">Trips</a>
+        <a class="tab" href="trip.html" data-od-id="tab-itinerary">Itinerary</a>
+        <a class="tab" href="budget.html" aria-current="page" data-od-id="tab-budget">Budget</a>
+        <a class="tab" href="packing.html" data-od-id="tab-packing">Packing</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="trip-context" data-od-id="trip-context"><p>Amalfi Coast · 12 May 2025 – 18 May 2025</p></div>
+
+  <main class="container narrow" data-od-id="budget-page">
+    <h1 class="page-title" data-od-id="page-title">Budget</h1>
+    <p class="page-sub">Cost per category, scaled to the highest one.</p>
+
+    <section class="panel" data-od-id="budget-panel">
+      <div class="budget-total" data-od-id="budget-total">
+        <span class="budget-total-label">Total</span>
+        <span class="budget-total-value">€1,289.50</span>
+      </div>
+      <div class="budget-rows" data-od-id="budget-rows">
+        <div class="budget-row" data-od-id="budget-row-accommodation">
+          <span class="budget-label">Accommodation</span>
+          <div class="budget-track" title="Accommodation: €640.00">
+            <div class="budget-fill" style="width:100%" role="img" aria-label="Accommodation: €640.00"></div>
+          </div>
+          <span class="budget-amount">€640.00</span>
+        </div>
+        <div class="budget-row" data-od-id="budget-row-travel">
+          <span class="budget-label">Travel</span>
+          <div class="budget-track" title="Travel: €270.00">
+            <div class="budget-fill" style="width:42.19%" role="img" aria-label="Travel: €270.00"></div>
+          </div>
+          <span class="budget-amount">€270.00</span>
+        </div>
+        <div class="budget-row" data-od-id="budget-row-food">
+          <span class="budget-label">Food</span>
+          <div class="budget-track" title="Food: €130.50">
+            <div class="budget-fill" style="width:20.39%" role="img" aria-label="Food: €130.50"></div>
+          </div>
+          <span class="budget-amount">€130.50</span>
+        </div>
+        <div class="budget-row" data-od-id="budget-row-activities">
+          <span class="budget-label">Activities</span>
+          <div class="budget-track" title="Activities: €129.00">
+            <div class="budget-fill" style="width:20.16%" role="img" aria-label="Activities: €129.00"></div>
+          </div>
+          <span class="budget-amount">€129.00</span>
+        </div>
+        <div class="budget-row" data-od-id="budget-row-shopping">
+          <span class="budget-label">Shopping</span>
+          <div class="budget-track" title="Shopping: €120.00">
+            <div class="budget-fill" style="width:18.75%" role="img" aria-label="Shopping: €120.00"></div>
+          </div>
+          <span class="budget-amount">€120.00</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

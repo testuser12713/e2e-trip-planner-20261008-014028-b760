@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Planner — Packing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" data-od-id="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="index.html" data-od-id="brand-link">Trip Planner</a>
+      <nav class="tabs" aria-label="Primary" data-od-id="primary-nav">
+        <a class="tab" href="index.html" data-od-id="tab-trips">Trips</a>
+        <a class="tab" href="trip.html" data-od-id="tab-itinerary">Itinerary</a>
+        <a class="tab" href="budget.html" data-od-id="tab-budget">Budget</a>
+        <a class="tab" href="packing.html" aria-current="page" data-od-id="tab-packing">Packing</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="trip-context" data-od-id="trip-context"><p>Amalfi Coast · 12 May 2025 – 18 May 2025</p></div>
+
+  <main class="container narrow" data-od-id="packing-page">
+    <h1 class="page-title" data-od-id="page-title">Packing</h1>
+    <p class="page-sub">Check off what you have packed.</p>
+
+    <section class="panel" data-od-id="packing-panel">
+      <div class="packing-progress" role="status" aria-live="polite" id="packingProgress" data-od-id="packing-progress">4 of 7 packed</div>
+      <div class="packing-track" data-od-id="packing-track">
+        <div class="packing-fill" id="packingFill" style="width:57.14%"></div>
+      </div>
+
+      <form class="add-item" id="addItemForm" novalidate data-od-id="add-item-form">
+        <div class="field">
+          <label class="field-label" for="newItem">Add an item</label>
+          <input type="text" id="newItem" name="item" placeholder="e.g. Passport" autocomplete="off" aria-describedby="newItemError">
+          <p class="field-error" id="newItemError">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2 12.5 11h-11L7 2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M7 5.5v2.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/><circle cx="7" cy="9.6" r="0.7" fill="currentColor"/></svg>
+            <span>Please enter an item name</span>
+          </p>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-auto" data-od-id="add-item-btn">Add</button>
+      </form>
+
+      <ul class="packing-list" id="packingList" data-od-id="packing-list">
+        <li class="packing-item is-packed" data-od-id="packing-item-passport">
+          <label><input type="checkbox" class="checkbox" checked><span class="packing-text">Passport</span></label>
+          <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete-item" aria-label="Delete item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </li>
+        <li class="packing-item is-packed" data-od-id="packing-item-sunscreen">
+          <label><input type="checkbox" class="checkbox" checked><span class="packing-text">Sunscreen</span></label>
+          <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete-item" aria-label="Delete item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </li>
+        <li class="packing-item is-packed" data-od-id="packing-item-swimwear">
+          <label><input type="checkbox" class="checkbox" checked><span class="packing-text">Swimwear</span></label>
+          <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete-item" aria-label="Delete item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </li>
+        <li class="packing-item" data-od-id="packing-item-hiking">
+          <label><input type="checkbox" class="checkbox"><span class="packing-text">Hiking shoes</span></label>
+          <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete-item" aria-label="Delete item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </li>
+        <li class="packing-item is-packed" data-od-id="packing-item-charger">
+          <label><input type="checkbox" class="checkbox" checked><span class="packing-text">Charger (EU plug)</span></label>
+          <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete-item" aria-label="Delete item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </li>
+        <li class="packing-item" data-od-id="packing-item-jacket">
+          <label><input type="checkbox" class="checkbox"><span class="packing-text">Light jacket</span></label>
+          <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete-item" aria-label="Delete item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </li>
+        <li class="packing-item" data-od-id="packing-item-sunglasses">
+          <label><input type="checkbox" class="checkbox"><span class="packing-text">Sunglasses</span></label>
+          <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete-item" aria-label="Delete item"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    var list = document.getElementById('packingList');
+    var progress = document.getElementById('packingProgress');
+    var fill = document.getElementById('packingFill');
+    var form = document.getElementById('addItemForm');
+    var input = document.getElementById('newItem');
+
+    var TRASH_ICON = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+    function esc(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function refresh() {
+      var items = list.querySelectorAll('.packing-item');
+      var packed = list.querySelectorAll('.packing-item.is-packed').length;
+      var total = items.length;
+      progress.textContent = packed + ' of ' + total + ' packed';
+      fill.style.width = (total === 0 ? 0 : (packed / total) * 100) + '%';
+    }
+
+    list.addEventListener('change', function (e) {
+      if (e.target.matches('.checkbox')) {
+        e.target.closest('.packing-item').classList.toggle('is-packed', e.target.checked);
+        refresh();
+      }
+    });
+
+    list.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-action="delete-item"]');
+      if (btn) {
+        btn.closest('.packing-item').remove();
+        refresh();
+      }
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = input.value.trim();
+      if (!name) {
+        input.closest('.field').classList.add('has-error');
+        input.focus();
+        return;
+      }
+      var li = document.createElement('li');
+      li.className = 'packing-item';
+      li.innerHTML = '<label><input type="checkbox" class="checkbox"><span class="packing-text">' + esc(name) + '</span></label>' +
+        '<button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete-item" aria-label="Delete item">' + TRASH_ICON + '</button>';
+      list.appendChild(li);
+      input.value = '';
+      input.closest('.field').classList.remove('has-error');
+      refresh();
+      input.focus();
+    });
+
+    input.addEventListener('input', function () {
+      if (input.value.trim()) { input.closest('.field').classList.remove('has-error'); }
+    });
+  </script>
+</body>
+</html>

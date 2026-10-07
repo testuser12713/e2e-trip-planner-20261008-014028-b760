@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Planner — Itinerary</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" data-od-id="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="index.html" data-od-id="brand-link">Trip Planner</a>
+      <nav class="tabs" aria-label="Primary" data-od-id="primary-nav">
+        <a class="tab" href="index.html" data-od-id="tab-trips">Trips</a>
+        <a class="tab" href="trip.html" aria-current="page" data-od-id="tab-itinerary">Itinerary</a>
+        <a class="tab" href="budget.html" data-od-id="tab-budget">Budget</a>
+        <a class="tab" href="packing.html" data-od-id="tab-packing">Packing</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="trip-context" data-od-id="trip-context"><p>Amalfi Coast · 12 May 2025 – 18 May 2025</p></div>
+
+  <main class="container narrow" data-od-id="itinerary-page">
+    <div class="page-title-row">
+      <h1 class="page-title" data-od-id="page-title">Itinerary</h1>
+      <button class="btn btn-secondary btn-auto" data-action="add" data-od-id="add-activity-top">Add activity</button>
+    </div>
+    <p class="page-sub">Every day of your trip, including days without activities.</p>
+
+    <section class="day" style="margin-top:24px" data-date="2025-05-12" data-od-id="day-1">
+      <div class="day-header">
+        <h2 class="day-title" data-od-id="day-1-title">Mon, 12 May 2025</h2>
+        <span class="day-meta" data-od-id="day-1-meta">2 activities · €729.00</span>
+      </div>
+      <div class="day-body">
+        <div class="activity-row" data-time="09:30" data-title="Flight to Naples" data-location="Naples Capodichino Airport" data-cost="89.00" data-category="Travel" data-od-id="activity-1">
+          <span class="activity-time">09:30</span>
+          <span class="activity-title">Flight to Naples</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Naples Capodichino Airport</span></span>
+            <span class="badge">Travel</span>
+          </span>
+          <span class="activity-cost">€89.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+        <div class="activity-row" data-time="14:30" data-title="Check in at Hotel Villa Franca" data-location="Via Pasitea 112, Positano" data-cost="640.00" data-category="Accommodation" data-od-id="activity-2">
+          <span class="activity-time">14:30</span>
+          <span class="activity-title">Check in at Hotel Villa Franca</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Via Pasitea 112, Positano</span></span>
+            <span class="badge">Accommodation</span>
+          </span>
+          <span class="activity-cost">€640.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" data-date="2025-05-13" data-od-id="day-2">
+      <div class="day-header">
+        <h2 class="day-title" data-od-id="day-2-title">Tue, 13 May 2025</h2>
+        <span class="day-meta" data-od-id="day-2-meta">2 activities · €72.50</span>
+      </div>
+      <div class="day-body">
+        <div class="activity-row" data-time="10:00" data-title="Hike the Path of the Gods" data-location="Sentiero degli Dei trailhead" data-cost="0.00" data-category="Activities" data-od-id="activity-3">
+          <span class="activity-time">10:00</span>
+          <span class="activity-title">Hike the Path of the Gods</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Sentiero degli Dei trailhead</span></span>
+            <span class="badge">Activities</span>
+          </span>
+          <span class="activity-cost">€0.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+        <div class="activity-row" data-time="19:30" data-title="Dinner at Da Vincenzo" data-location="Via Pasitea, Positano" data-cost="72.50" data-category="Food" data-od-id="activity-4">
+          <span class="activity-time">19:30</span>
+          <span class="activity-title">Dinner at Da Vincenzo</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Via Pasitea, Positano</span></span>
+            <span class="badge">Food</span>
+          </span>
+          <span class="activity-cost">€72.50</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" data-date="2025-05-14" data-od-id="day-3">
+      <div class="day-header">
+        <h2 class="day-title" data-od-id="day-3-title">Wed, 14 May 2025</h2>
+        <span class="day-meta" data-od-id="day-3-meta">3 activities · €150.00</span>
+      </div>
+      <div class="day-body">
+        <div class="activity-row" data-time="09:00" data-title="Ferry to Capri" data-location="Positano pier" data-cost="46.00" data-category="Travel" data-od-id="activity-5">
+          <span class="activity-time">09:00</span>
+          <span class="activity-title">Ferry to Capri</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Positano pier</span></span>
+            <span class="badge">Travel</span>
+          </span>
+          <span class="activity-cost">€46.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+        <div class="activity-row" data-time="13:00" data-title="Lunch at La Fontelina" data-location="Capri" data-cost="58.00" data-category="Food" data-od-id="activity-6">
+          <span class="activity-time">13:00</span>
+          <span class="activity-title">Lunch at La Fontelina</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Capri</span></span>
+            <span class="badge">Food</span>
+          </span>
+          <span class="activity-cost">€58.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+        <div class="activity-row" data-time="18:00" data-title="Boat back to Positano" data-location="" data-cost="46.00" data-category="Travel" data-od-id="activity-7">
+          <span class="activity-time">18:00</span>
+          <span class="activity-title">Boat back to Positano</span>
+          <span class="activity-sub">
+            <span class="badge">Travel</span>
+          </span>
+          <span class="activity-cost">€46.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" data-date="2025-05-15" data-od-id="day-4">
+      <div class="day-header">
+        <h2 class="day-title" data-od-id="day-4-title">Thu, 15 May 2025</h2>
+        <span class="day-meta" data-od-id="day-4-meta">2 activities · €129.00</span>
+      </div>
+      <div class="day-body">
+        <div class="activity-row" data-time="11:00" data-title="Guided tour of Pompeii" data-location="Pompei" data-cost="34.00" data-category="Activities" data-od-id="activity-8">
+          <span class="activity-time">11:00</span>
+          <span class="activity-title">Guided tour of Pompeii</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Pompei</span></span>
+            <span class="badge">Activities</span>
+          </span>
+          <span class="activity-cost">€34.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+        <div class="activity-row" data-time="20:00" data-title="Cooking class" data-location="Bagni d'Arienzo" data-cost="95.00" data-category="Activities" data-od-id="activity-9">
+          <span class="activity-time">20:00</span>
+          <span class="activity-title">Cooking class</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Bagni d'Arienzo</span></span>
+            <span class="badge">Activities</span>
+          </span>
+          <span class="activity-cost">€95.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" data-date="2025-05-16" data-od-id="day-5">
+      <div class="day-header">
+        <h2 class="day-title" data-od-id="day-5-title">Fri, 16 May 2025</h2>
+        <span class="day-meta" data-od-id="day-5-meta">0 activities · €0.00</span>
+      </div>
+      <div class="day-body">
+        <div class="day-empty" data-od-id="day-5-empty">
+          <p>No activities yet</p>
+          <button class="btn btn-secondary btn-auto" data-action="add" data-od-id="day-5-add">Add activity</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" data-date="2025-05-17" data-od-id="day-6">
+      <div class="day-header">
+        <h2 class="day-title" data-od-id="day-6-title">Sat, 17 May 2025</h2>
+        <span class="day-meta" data-od-id="day-6-meta">2 activities · €120.00</span>
+      </div>
+      <div class="day-body">
+        <div class="activity-row" data-time="10:30" data-title="Beach day at Spiaggia Grande" data-location="" data-cost="0.00" data-category="Activities" data-od-id="activity-10">
+          <span class="activity-time">10:30</span>
+          <span class="activity-title">Beach day at Spiaggia Grande</span>
+          <span class="activity-sub">
+            <span class="badge">Activities</span>
+          </span>
+          <span class="activity-cost">€0.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+        <div class="activity-row" data-time="16:00" data-title="Shopping in town" data-location="Positano boutiques" data-cost="120.00" data-category="Shopping" data-od-id="activity-11">
+          <span class="activity-time">16:00</span>
+          <span class="activity-title">Shopping in town</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Positano boutiques</span></span>
+            <span class="badge">Shopping</span>
+          </span>
+          <span class="activity-cost">€120.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="day" data-date="2025-05-18" data-od-id="day-7">
+      <div class="day-header">
+        <h2 class="day-title" data-od-id="day-7-title">Sun, 18 May 2025</h2>
+        <span class="day-meta" data-od-id="day-7-meta">2 activities · €89.00</span>
+      </div>
+      <div class="day-body">
+        <div class="activity-row" data-time="11:00" data-title="Check out" data-location="Hotel Villa Franca" data-cost="0.00" data-category="Accommodation" data-od-id="activity-12">
+          <span class="activity-time">11:00</span>
+          <span class="activity-title">Check out</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Hotel Villa Franca</span></span>
+            <span class="badge">Accommodation</span>
+          </span>
+          <span class="activity-cost">€0.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+        <div class="activity-row" data-time="15:00" data-title="Flight home" data-location="Naples Capodichino Airport" data-cost="89.00" data-category="Travel" data-od-id="activity-13">
+          <span class="activity-time">15:00</span>
+          <span class="activity-title">Flight home</span>
+          <span class="activity-sub">
+            <span class="activity-loc"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Naples Capodichino Airport</span></span>
+            <span class="badge">Travel</span>
+          </span>
+          <span class="activity-cost">€89.00</span>
+          <span class="activity-actions">
+            <button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg></button>
+            <button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="modal" id="activityDialog" data-od-id="activity-dialog">
+    <div class="modal-panel wide">
+      <h2 class="modal-title" id="activityDialogTitle">Add activity</h2>
+      <form id="activityForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label class="field-label" for="actTitle">Title</label>
+            <input type="text" id="actTitle" name="title" placeholder="e.g. Dinner at Da Vincenzo" autocomplete="off">
+            <p class="field-error"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2 12.5 11h-11L7 2z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M7 5.5v2.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/><circle cx="7" cy="9.6" r="0.7" fill="currentColor"/></svg><span>Please enter a title</span></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="actTime">Time</label>
+            <input type="time" id="actTime" name="time">
+          </div>
+          <div class="field">
+            <label class="field-label" for="actLocation">Location</label>
+            <input type="text" id="actLocation" name="location" placeholder="Optional" autocomplete="off">
+          </div>
+          <div class="field">
+            <label class="field-label" for="actCost">Cost (€)</label>
+            <input type="number" id="actCost" name="cost" min="0" step="0.01" placeholder="0.00" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label class="field-label" for="actCategory">Category</label>
+            <select id="actCategory" name="category">
+              <option value="Travel">Travel</option>
+              <option value="Accommodation">Accommodation</option>
+              <option value="Food">Food</option>
+              <option value="Activities">Activities</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-actions" style="margin-top:20px">
+          <button type="button" class="btn btn-secondary" data-close="activityDialog">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save activity</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="deleteDialog" data-od-id="delete-dialog">
+    <div class="modal-panel">
+      <h2 class="modal-title">Delete activity?</h2>
+      <p class="modal-body">This removes the activity and its cost from your budget.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" data-close="deleteDialog">Cancel</button>
+        <button type="button" class="btn btn-danger" id="confirmDelete">Delete</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    var eur = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR' });
+    function fmtMoney(n) { return eur.format(n); }
+    function fmtCount(n) { return n + (n === 1 ? ' activity' : ' activities'); }
+    function esc(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    var LOC_ICON = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>';
+    var EDIT_ICON = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M12.5 3.5l2 2L6 14H4v-2l8.5-8.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 5l2 2" stroke="currentColor" stroke-width="1.4"/></svg>';
+    var TRASH_ICON = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M8 5V3.5h2V5M5.5 5l.7 9h5.6l.7-9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+    var activityDialog = document.getElementById('activityDialog');
+    var activityForm = document.getElementById('activityForm');
+    var deleteDialog = document.getElementById('deleteDialog');
+    var firstDay = document.querySelector('.day');
+    var targetDay = null;
+    var editRow = null;
+    var pendingDeleteRow = null;
+
+    function rowHTML(data) {
+      var loc = data.location
+        ? '<span class="activity-loc">' + LOC_ICON + '<span>' + esc(data.location) + '</span></span>'
+        : '';
+      return '<span class="activity-time">' + esc(data.time) + '</span>' +
+        '<span class="activity-title">' + esc(data.title) + '</span>' +
+        '<span class="activity-sub">' + loc + '<span class="badge">' + esc(data.category) + '</span></span>' +
+        '<span class="activity-cost">' + fmtMoney(parseFloat(data.cost)) + '</span>' +
+        '<span class="activity-actions">' +
+          '<button class="btn btn-ghost icon-btn" data-action="edit" aria-label="Edit activity">' + EDIT_ICON + '</button>' +
+          '<button class="btn btn-ghost btn-danger-ghost icon-btn" data-action="delete" aria-label="Delete activity">' + TRASH_ICON + '</button>' +
+        '</span>';
+    }
+
+    function applyRow(row, data) {
+      row.dataset.time = data.time;
+      row.dataset.title = data.title;
+      row.dataset.location = data.location;
+      row.dataset.cost = data.cost;
+      row.dataset.category = data.category;
+      row.innerHTML = rowHTML(data);
+    }
+
+    function refreshDay(dayEl) {
+      var rows = dayEl.querySelectorAll('.day-body .activity-row');
+      var sum = 0;
+      rows.forEach(function (r) { sum += parseFloat(r.dataset.cost || '0'); });
+      dayEl.querySelector('.day-meta').textContent = fmtCount(rows.length) + ' · ' + fmtMoney(sum);
+    }
+
+    function sortDay(dayEl) {
+      var body = dayEl.querySelector('.day-body');
+      var rows = Array.prototype.slice.call(body.querySelectorAll('.activity-row'));
+      rows.sort(function (a, b) {
+        return a.dataset.time < b.dataset.time ? -1 : (a.dataset.time > b.dataset.time ? 1 : 0);
+      });
+      rows.forEach(function (r) { body.appendChild(r); });
+    }
+
+    function openAdd(dayEl) {
+      editRow = null;
+      targetDay = dayEl || firstDay;
+      document.getElementById('activityDialogTitle').textContent = 'Add activity';
+      activityForm.reset();
+      activityForm.category.value = 'Activities';
+      activityForm.querySelector('.field').classList.remove('has-error');
+      activityDialog.showModal();
+      activityForm.title.focus();
+    }
+
+    function openEdit(row) {
+      editRow = row;
+      targetDay = row.closest('.day');
+      document.getElementById('activityDialogTitle').textContent = 'Edit activity';
+      activityForm.title.value = row.dataset.title;
+      activityForm.time.value = row.dataset.time;
+      activityForm.location.value = row.dataset.location || '';
+      activityForm.cost.value = row.dataset.cost || '';
+      activityForm.category.value = row.dataset.category;
+      activityForm.querySelector('.field').classList.remove('has-error');
+      activityDialog.showModal();
+      activityForm.title.focus();
+    }
+
+    document.querySelectorAll('[data-close]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.getElementById(btn.getAttribute('data-close')).close();
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-action]');
+      if (!btn) return;
+      var action = btn.getAttribute('data-action');
+      if (action === 'add') {
+        openAdd(btn.closest('.day'));
+      } else if (action === 'edit') {
+        openEdit(btn.closest('.activity-row'));
+      } else if (action === 'delete') {
+        pendingDeleteRow = btn.closest('.activity-row');
+        deleteDialog.showModal();
+        document.getElementById('confirmDelete').focus();
+      }
+    });
+
+    activityForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var titleField = activityForm.title;
+      var title = titleField.value.trim();
+      if (!title) {
+        titleField.closest('.field').classList.add('has-error');
+        titleField.focus();
+        return;
+      }
+      var cost = parseFloat(activityForm.cost.value);
+      var data = {
+        time: activityForm.time.value || '00:00',
+        title: title,
+        location: activityForm.location.value.trim(),
+        cost: (isNaN(cost) || cost < 0 ? 0 : cost).toFixed(2),
+        category: activityForm.category.value
+      };
+      if (editRow) {
+        applyRow(editRow, data);
+      } else {
+        var body = targetDay.querySelector('.day-body');
+        var empty = body.querySelector('.day-empty');
+        if (empty) { empty.remove(); }
+        var row = document.createElement('div');
+        row.className = 'activity-row';
+        applyRow(row, data);
+        body.appendChild(row);
+        sortDay(targetDay);
+      }
+      refreshDay(targetDay);
+      activityDialog.close();
+    });
+
+    document.getElementById('confirmDelete').addEventListener('click', function () {
+      if (pendingDeleteRow) {
+        var day = pendingDeleteRow.closest('.day');
+        pendingDeleteRow.remove();
+        var body = day.querySelector('.day-body');
+        if (!body.querySelector('.activity-row')) {
+          body.innerHTML = '<div class="day-empty"><p>No activities yet</p>' +
+            '<button class="btn btn-secondary btn-auto" data-action="add">Add activity</button></div>';
+        }
+        refreshDay(day);
+      }
+      deleteDialog.close();
+    });
+  </script>
+</body>
+</html>

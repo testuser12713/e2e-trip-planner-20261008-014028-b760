@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Planner — Trips</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" data-od-id="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="index.html" data-od-id="brand-link">Trip Planner</a>
+      <nav class="tabs" aria-label="Primary" data-od-id="primary-nav">
+        <a class="tab" href="index.html" aria-current="page" data-od-id="tab-trips">Trips</a>
+        <span class="tab is-disabled" aria-disabled="true" title="Select a trip first" data-od-id="tab-itinerary">Itinerary</span>
+        <span class="tab is-disabled" aria-disabled="true" title="Select a trip first" data-od-id="tab-budget">Budget</span>
+        <span class="tab is-disabled" aria-disabled="true" title="Select a trip first" data-od-id="tab-packing">Packing</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" data-od-id="trips-page">
+    <div class="page-title-row">
+      <h1 class="page-title" data-od-id="page-title">Your trips</h1>
+      <a class="btn btn-primary" href="new-trip.html" data-od-id="new-trip-btn">New trip</a>
+    </div>
+    <p class="page-sub">Sorted by start date. Select a trip to open its itinerary.</p>
+
+    <div class="trip-grid" data-od-id="trip-grid">
+      <article class="trip-card" data-od-id="trip-card-amalfi" data-trip-name="Amalfi Coast">
+        <a class="trip-card-link" href="trip.html" data-od-id="trip-link-amalfi">
+          <div class="trip-name" data-od-id="trip-name-amalfi">Amalfi Coast</div>
+          <div class="trip-dest" data-od-id="trip-dest-amalfi">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+            <span>Positano, Italy</span>
+          </div>
+          <div class="trip-dates">12 May 2025 – 18 May 2025</div>
+        </a>
+        <div class="trip-actions" data-od-id="trip-actions-amalfi">
+          <button class="btn btn-ghost btn-auto" data-action="rename" data-od-id="rename-amalfi">Rename</button>
+          <button class="btn btn-ghost btn-danger-ghost btn-auto" data-action="delete" data-od-id="delete-amalfi">Delete</button>
+        </div>
+      </article>
+
+      <article class="trip-card" data-od-id="trip-card-kyoto" data-trip-name="Kyoto in Autumn">
+        <a class="trip-card-link" href="trip.html" data-od-id="trip-link-kyoto">
+          <div class="trip-name" data-od-id="trip-name-kyoto">Kyoto in Autumn</div>
+          <div class="trip-dest" data-od-id="trip-dest-kyoto">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+            <span>Kyoto, Japan</span>
+          </div>
+          <div class="trip-dates">2 Nov 2025 – 11 Nov 2025</div>
+        </a>
+        <div class="trip-actions" data-od-id="trip-actions-kyoto">
+          <button class="btn btn-ghost btn-auto" data-action="rename" data-od-id="rename-kyoto">Rename</button>
+          <button class="btn btn-ghost btn-danger-ghost btn-auto" data-action="delete" data-od-id="delete-kyoto">Delete</button>
+        </div>
+      </article>
+
+      <article class="trip-card" data-od-id="trip-card-berlin" data-trip-name="Berlin Weekend">
+        <a class="trip-card-link" href="trip.html" data-od-id="trip-link-berlin">
+          <div class="trip-name" data-od-id="trip-name-berlin">Berlin Weekend</div>
+          <div class="trip-dest" data-od-id="trip-dest-berlin">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 8.6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.2"/><path d="M8 14.5S12.5 11 12.5 7a4.5 4.5 0 1 0-9 0c0 4 4.5 7.5 4.5 7.5z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+            <span>Berlin, Germany</span>
+          </div>
+          <div class="trip-dates">20 Jun 2025 – 22 Jun 2025</div>
+        </a>
+        <div class="trip-actions" data-od-id="trip-actions-berlin">
+          <button class="btn btn-ghost btn-auto" data-action="rename" data-od-id="rename-berlin">Rename</button>
+          <button class="btn btn-ghost btn-danger-ghost btn-auto" data-action="delete" data-od-id="delete-berlin">Delete</button>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <dialog class="modal" id="renameDialog" data-od-id="rename-dialog">
+    <div class="modal-panel">
+      <h2 class="modal-title">Rename trip</h2>
+      <form id="renameForm">
+        <div class="form-grid">
+          <div class="field">
+            <label class="field-label" for="renameName">Trip name</label>
+            <input type="text" id="renameName" name="name" autocomplete="off">
+          </div>
+        </div>
+        <div class="modal-actions" style="margin-top:20px">
+          <button type="button" class="btn btn-secondary" data-close="renameDialog">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="deleteDialog" data-od-id="delete-dialog">
+    <div class="modal-panel">
+      <h2 class="modal-title">Delete trip?</h2>
+      <p class="modal-body">This deletes the trip and all of its activities and packing items.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" data-close="deleteDialog">Cancel</button>
+        <button type="button" class="btn btn-danger" id="confirmDelete">Delete trip</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    const renameDialog = document.getElementById('renameDialog');
+    const deleteDialog = document.getElementById('deleteDialog');
+    const renameForm = document.getElementById('renameForm');
+    const renameName = document.getElementById('renameName');
+    let renameCard = null;
+    let deleteCard = null;
+
+    document.querySelectorAll('[data-close]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.getElementById(btn.getAttribute('data-close')).close();
+      });
+    });
+
+    document.querySelectorAll('[data-action="rename"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        renameCard = btn.closest('.trip-card');
+        renameName.value = renameCard.querySelector('.trip-name').textContent;
+        renameDialog.showModal();
+        renameName.focus();
+        renameName.select();
+      });
+    });
+
+    renameForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var value = renameName.value.trim();
+      if (value && renameCard) {
+        renameCard.querySelector('.trip-name').textContent = value;
+        renameCard.dataset.tripName = value;
+      }
+      renameDialog.close();
+    });
+
+    document.querySelectorAll('[data-action="delete"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        deleteCard = btn.closest('.trip-card');
+        deleteDialog.showModal();
+        document.getElementById('confirmDelete').focus();
+      });
+    });
+
+    document.getElementById('confirmDelete').addEventListener('click', function () {
+      if (deleteCard) { deleteCard.remove(); }
+      deleteDialog.close();
+    });
+  </script>
+</body>
+</html>
