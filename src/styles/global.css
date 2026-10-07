@@ -952,3 +952,69 @@ input[type='number'].input {
     padding-top: 32px;
   }
 }
+
+/* ---------------------------------------------- activity rows + form (plan) */
+
+.activity-row__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.activity-row__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.activity-list__add {
+  display: flex;
+}
+
+.activity-form {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.activity-form__title {
+  font-size: var(--size-lg);
+  margin-bottom: var(--space-1);
+}
+
+.activity-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 639px) {
+  .activity-row__time {
+    grid-area: time;
+  }
+
+  .activity-row__cost {
+    grid-area: cost;
+  }
+
+  .activity-row__main {
+    grid-area: title;
+  }
+
+  .activity-row .badge {
+    grid-area: category;
+  }
+
+  .activity-row__actions {
+    grid-area: actions;
+  }
+
+  .activity-list__add .btn {
+    width: 100%;
+  }
+}
