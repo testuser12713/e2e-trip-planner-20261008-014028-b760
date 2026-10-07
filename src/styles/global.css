@@ -105,6 +105,26 @@ textarea {
   gap: var(--space-3);
 }
 
+.page-title {
+  font-size: var(--size-xl);
+  font-weight: var(--weight-heading);
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+.page-sub {
+  margin-top: 4px;
+  color: var(--color-muted);
+  font-size: var(--size-base);
+}
+
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-top: var(--space-4);
+}
+
 .section-heading {
   display: flex;
   flex-wrap: wrap;
@@ -728,9 +748,34 @@ input[type='number'].input {
   transition: width 200ms ease;
 }
 
+.add-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.add-item .field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+@media (min-width: 480px) {
+  .add-item {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .add-item .btn {
+    flex-shrink: 0;
+  }
+}
+
 .packing-list {
   list-style: none;
-  margin: 0;
+  margin: var(--space-1) 0 0;
   padding: 0;
 }
 
