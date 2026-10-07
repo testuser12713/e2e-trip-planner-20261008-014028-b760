@@ -176,7 +176,18 @@ export function ActivityList({ tripId, date }: ActivityListProps) {
         </div>
       ))}
 
-      {form ? (
+      {dayActivities.length === 0 && !form ? (
+        <div className="day-section__empty">
+          <p>No activities yet</p>
+          <button
+            type="button"
+            className="btn btn--secondary btn--responsive"
+            onClick={() => setForm({})}
+          >
+            Add activity
+          </button>
+        </div>
+      ) : form ? (
         <ActivityForm
           tripId={tripId}
           date={date}

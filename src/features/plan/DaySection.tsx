@@ -38,8 +38,10 @@ export interface DaySectionProps {
 }
 
 /**
- * One day of the itinerary: the date, the activity count and cost sum, and
- * either the day's activities or the dashed empty box with its own add action.
+ * One day of the itinerary: the date, the activity count and cost sum, and the
+ * day's activity list. The list is rendered for every day (also empty ones) so
+ * it always hosts the add-activity form and the 'No activities yet' state for
+ * that exact day.
  */
 export function DaySection({ tripId, date }: DaySectionProps) {
   const { activities } = useTripStore();
@@ -54,20 +56,7 @@ export function DaySection({ tripId, date }: DaySectionProps) {
         <h2 className="day-section__date">{formatDate(date)}</h2>
         <span className="day-section__meta">{meta}</span>
       </div>
-      {dayActivities.length === 0 ? (
-        <div className="day-section__empty">
-          <p>No activities yet</p>
-          <button
-            type="button"
-            className="btn btn--secondary btn--responsive"
-            onClick={() => requestAddActivity(tripId, date)}
-          >
-            Add activity
-          </button>
-        </div>
-      ) : (
-        <ActivityList tripId={tripId} date={date} />
-      )}
+      <ActivityList tripId={tripId} date={date} />
     </section>
   );
 }
