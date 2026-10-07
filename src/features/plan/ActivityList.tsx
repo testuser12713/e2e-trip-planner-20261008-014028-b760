@@ -1,8 +1,22 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTripStore } from '../../store/TripStoreContext';
 import type { Activity } from '../../types';
 import { formatEuro } from '../../lib/format';
 import { ActivityForm } from './ActivityForm';
+
+/**
+ * Name of the DOM event the day plan raises when the user asks to add an
+ * activity from a day header or an empty day box. The event is used instead of
+ * a callback prop because the day plan renders those controls outside this
+ * component while ActivityList keeps its agreed `{tripId, date}` signature.
+ */
+export const ADD_ACTIVITY_EVENT = 'trip-planner:add-activity';
+
+/** Payload carried by {@link ADD_ACTIVITY_EVENT}. */
+export interface AddActivityEventDetail {
+  tripId: string;
+  date: string;
+}
 
 export interface ActivityListProps {
   tripId: string;
@@ -109,6 +123,21 @@ export function ActivityList({ tripId, date }: ActivityListProps) {
       ),
     [activities, tripId, date],
   );
+
+  useEffect(() => {
+    function handleAddActivity(event: Event) {
+      const detail = (event as CustomEvent<Partial<AddActivityEventDetail>>)
+        .detail;
+      if (!detail) return;
+      if (detail.tripId === tripId && detail.date === date) {
+        setForm({});
+      }
+    }
+
+    window.addEventListener(ADD_ACTIVITY_EVENT, handleAddActivity);
+    return () =>
+      window.removeEventListener(ADD_ACTIVITY_EVENT, handleAddActivity);
+  }, [tripId, date]);
 
   return (
     <div className="activity-list">
