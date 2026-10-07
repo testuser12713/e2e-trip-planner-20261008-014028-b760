@@ -390,6 +390,31 @@ input[type='number'].input {
   border-color: var(--color-borderStrong);
 }
 
+/* --------------------------------------------------------------- trip form */
+
+.trip-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.trip-form__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@media (min-width: 480px) {
+  .trip-form__actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
 /* ------------------------------------------------------------------ header */
 
 .app-header {
@@ -515,13 +540,39 @@ input[type='number'].input {
   box-shadow: 0 2px 8px rgba(16, 24, 40, 0.06);
 }
 
+.trip-card:focus-within {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 .trip-card__name {
   font-size: var(--size-lg);
   font-weight: var(--weight-heading);
 }
 
+.trip-card__link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  color: inherit;
+}
+
+.trip-card__link:hover {
+  color: inherit;
+}
+
 .trip-card__destination {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: var(--color-fgSecondary);
+}
+
+.trip-card__destination svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-muted);
+  flex-shrink: 0;
 }
 
 .trip-card__dates {
