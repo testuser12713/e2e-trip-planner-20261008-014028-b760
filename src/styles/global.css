@@ -97,6 +97,31 @@ textarea {
   max-width: 760px;
 }
 
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0);
+}
+
+.page-title {
+  font-size: var(--size-xl);
+  font-weight: var(--weight-heading);
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+.page-sub {
+  color: var(--color-muted);
+  font-size: var(--size-base);
+}
+
+.panel {
+  margin-top: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
 .page-header {
   display: flex;
   flex-wrap: wrap;
