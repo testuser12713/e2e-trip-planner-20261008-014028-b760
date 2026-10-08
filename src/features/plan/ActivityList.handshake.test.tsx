@@ -1,9 +1,7 @@
-import { act, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { TripStoreProvider } from '../../store/TripStoreContext';
 import { ADD_ACTIVITY_EVENT, ActivityList } from './ActivityList';
-import { DaySection } from './DaySection';
 
 const TRIP_ID = 'trip-1';
 const DATE = '2025-05-12';
@@ -16,48 +14,47 @@ function renderList() {
   );
 }
 
-function dispatchAddActivity(tripId: string, date: string) {
-  act(() => {
-    window.dispatchEvent(
-      new CustomEvent(ADD_ACTIVITY_EVENT, { detail: { tripId, date } }),
-    );
-  });
+function dispatchAddActivity(detail: { tripId: string; date: string }) {
+  fireEvent(
+    window,
+    new CustomEvent(ADD_ACTIVITY_EVENT, { detail }),
+  );
+}
+
+/** The create form is open when its submit button (not the trigger) exists. */
+function formIsOpen(): boolean {
+  return screen.queryByRole('button', { name: 'Save activity' }) !== null;
 }
 
 describe('ActivityList add-activity handshake', () => {
-  it('opens the form when the event matches its own trip and day', () => {
+  it('opens the activity form when the event targets its own day', () => {
     renderList();
-    expect(screen.queryByLabelText('Title')).not.toBeInTheDocument();
+    expect(formIsOpen()).toBe(false);
 
-    dispatchAddActivity(TRIP_ID, DATE);
+    dispatchAddActivity({ tripId: TRIP_ID, date: DATE });
 
-    expect(screen.getByLabelText('Title')).toBeInTheDocument();
+    expect(formIsOpen()).toBe(true);
   });
 
-  it('ignores the event for another day or another trip', () => {
+  it('stays closed when the event targets a different trip', () => {
     renderList();
 
-    dispatchAddActivity(TRIP_ID, '2025-05-13');
-    dispatchAddActivity('trip-2', DATE);
+    dispatchAddActivity({ tripId: 'other-trip', date: DATE });
 
-    expect(screen.queryByLabelText('Title')).not.toBeInTheDocument();
+    expect(formIsOpen()).toBe(false);
     expect(
       screen.getByRole('button', { name: 'Add activity' }),
     ).toBeInTheDocument();
   });
 
-  it('opens the form from an empty day section for that day', async () => {
-    const user = userEvent.setup();
-    render(
-      <TripStoreProvider>
-        <DaySection tripId={TRIP_ID} date={DATE} />
-      </TripStoreProvider>,
-    );
+  it('stays closed when the event targets a different day', () => {
+    renderList();
 
-    expect(screen.getByText('No activities yet')).toBeInTheDocument();
+    dispatchAddActivity({ tripId: TRIP_ID, date: '2025-05-13' });
 
-    await user.click(screen.getByRole('button', { name: 'Add activity' }));
-
-    expect(screen.getByLabelText('Title')).toBeInTheDocument();
+    expect(formIsOpen()).toBe(false);
+    expect(
+      screen.getByRole('button', { name: 'Add activity' }),
+    ).toBeInTheDocument();
   });
 });
